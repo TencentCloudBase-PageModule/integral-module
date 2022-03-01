@@ -1,0 +1,85 @@
+.page-module-integralCenter-detail {
+  margin-left: var(--integralCenter-margin-space-burden--);
+  margin-right: var(--integralCenter-margin-space-burden--);
+  background-color: var(--integralCenter-detail-bg--);
+  padding: 32rpx var(--integralCenter-margin-space--) 40rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.page-module-integralCenter-detail-info {
+  color: var(--integralCenter-detail-text-second--);
+}
+
+.page-module-integralCenter-detail-info__num {
+  line-height: 68rpx;
+  font-size: 48rpx;
+}
+
+.page-module-integralCenter-detail-info__num .page-module-integralCenter-icon {
+  width: 32rpx;
+  height: 32rpx;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 16rpx;
+}
+
+.page-module-integralCenter-detail-info__num-text {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 68rpx;
+  font-size: 48rpx;
+}
+
+.page-module-integralCenter-detail-info__limit {
+  font-size: 24rpx;
+  line-height: 32rpx;
+}
+
+
+.page-module-integralCenter-detail-tabs {
+  width: 416rpx;
+  height: 36rpx;
+  margin: 40rpx auto 0;
+  display: flex;
+  flex-direction: row;
+}
+
+.page-module-integralCenter-detail-tabs-item {
+  width: 50%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: var(--integralCenter-tabs-text-second--);
+  position: relative;
+}
+
+.page-module-integralCenter-detail-tabs-item::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 24rpx;
+  top: 6rpx;
+  right: 0;
+  background: var(--integralCenter-tabs-text-second--);
+}
+
+.page-module-integralCenter-detail-tabs-item:last-child::before {
+  display: none;
+}
+
+.page-module-integralCenter-tabs-icon {
+  width: 24rpx;
+  height: 24rpx;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.page-module-integralCenter-detail-tabs-item:last-child {
+  text-align: right;
+}
+
+.page-module-integralCenter-detail-tabs-item__title {
+  display: inline-block;
+  vertical-align: -4rpx;
+  margin-left: 10rpx;
+}

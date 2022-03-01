@@ -1,0 +1,21 @@
+/* scene-module/page_module_sign_up/components/__base/card/index.wxss */
+.page-module-integralCenter-card {
+  margin-top: 20rpx;
+  border-radius: 20rpx;
+  padding: 24rpx 0;
+  background-color: var(--layout-bg--);
+  margin-bottom: 20rpx;
+}
+
+.page-module-integralCenter-card-title {
+  line-height: 44rpx;
+  text-align: center;
+  font-size: 32rpx;
+  color: #333333;
+}
+
+.page-module-integralCenter-card-body {
+  margin-top: 20rpx;
+  margin-bottom: -1px;
+  padding: 0 20rpx;
+}

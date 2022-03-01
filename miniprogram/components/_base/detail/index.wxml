@@ -1,0 +1,15 @@
+<view class="page-module-integralCenter-detail">
+  <view class="page-module-integralCenter-detail-info">
+    <view class="page-module-integralCenter-detail-info__num">
+      <view class="page-module-integralCenter-detail-info__num-text">{{integralNum}}</view>
+      <image class="page-module-integralCenter-icon" src="https://cloudcache.tencent-cloud.cn/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/gold-logo.png" />
+    </view>
+    <view class="page-module-integralCenter-detail-info__limit">{{integralTimeLimit}}</view>
+  </view>
+  <view class="page-module-integralCenter-detail-tabs">
+    <view class="page-module-integralCenter-detail-tabs-item" wx:for="{{tabsData}}" wx:key="key" wx:for-item="items">
+      <image class="page-module-integralCenter-tabs-icon" src="{{items.tabsIcon}}" />
+      <navigator class="page-module-integralCenter-detail-tabs-item__title" url="{{items.tabsJumpUrl}}" hover-class="navigator-hover">{{items.tabsTitle}}</navigator>
+    </view>
+  </view>
+</view>

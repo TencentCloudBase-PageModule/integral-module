@@ -1,0 +1,17 @@
+<!-- scene-module/signIn/components/half-sreen-Dialog/index.wxml -->
+<view class="page-module-integralCenter-half-mask" wx:if="{{halfShow}}" bind:tap="handleCloseHalfDialog"></view>
+<view class="page-module-integralCenter-half-screen-dialog {{halfShow?'page-module-integralCenter-half-screen-dialog_show':''}}">
+  <view class="page-module-integralCenter-half-screen-dialog__hd">
+    <view class="page-module-integralCenter-half-screen-dialog__hd__side" bind:tap="handleCloseHalfDialog">
+      <image class="page-module-integralCenter-icon-close" src="https://scene-module-9gee6idgabd997ca-1306328562.tcloudbaseapp.com/signIn/images/icon-close.svg" />
+    </view>
+    <view class="page-module-integralCenter-half-screen-dialog__hd__main">
+      <strong class="page-module-integralCenter-half-screen-dialog__title">积分规则</strong>
+    </view>
+  </view>
+  <view class="page-module-integralCenter-half-screen-dialog__bd">
+    <view class="page-module-integralCenter-half-screen-dialog__bd-inner">
+      <slot></slot>
+    </view>
+  </view>
+</view>

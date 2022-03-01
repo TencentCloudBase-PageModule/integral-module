@@ -1,0 +1,5 @@
+<view>
+  <IntegralCenter signModule="{{true}}">
+    <view>sad</view>
+  </IntegralCenter>
+</view>

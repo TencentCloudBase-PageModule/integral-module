@@ -1,0 +1,245 @@
+.page-module-integralCenter-wrap {
+    --layout-bg--: #fff;
+    --integralCenter-detail-bg--: #F24C00;
+    --integralCenter-detail-text--: #FF5B10;
+    --integralCenter-detail-text-second--: #fff;
+    --integralCenter-tabs-text-second--: #fff;
+    --integralCenter-margin-space--: 24rpx;
+    --integralCenter-margin-space-burden--: -24rpx;
+    width: 100%;
+    padding: 0 var(--integralCenter-margin-space--);
+    box-sizing: border-box;
+    position: relative;
+    background: #f6f6f6;
+}
+
+
+.page-module-integralCenter-signup {
+    position: relative;
+}
+
+.page-module-integralCenter-signup::before {
+    content: '';
+    height: calc(100% - 104rpx);
+    position: absolute;
+    top: 0;
+    left: var(--integralCenter-margin-space-burden--);
+    right: var(--integralCenter-margin-space-burden--);
+    background-color: var(--integralCenter-detail-bg--);
+    z-index: -1;
+}
+
+.page-module-integralCenter-cell-bg .t-cell {
+    background: #F9F9F9;
+    border-radius: 8rpx;
+    margin-bottom: 20rpx;
+    padding: 24rpx 20rpx;
+}
+
+.page-module-integralCenter-cell-bg:last-child .t-cell:last-child {
+    margin-bottom: 0;
+}
+
+.page-module-integralCenter-cell .t-cell::after {
+    border-bottom: 0;
+}
+
+.page-module-integralCenter-cell:last-child .t-cell::after {
+    border-bottom: 0;
+}
+
+.page-module-integralCenter-cell .t-cell__title-text {
+    font-size: 32rpx;
+    line-height: 40rpx;
+}
+
+.page-module-integralCenter-cell .t-cell__description-text {
+    font-size: 24rpx;
+    line-height: 28rpx;
+}
+
+
+.page-module-integralCenter-card-box .title-image-large {
+    width: 72rpx;
+    height: 72rpx;
+    border-radius: 50%;
+}
+
+.page-module-integralCenter-card-box .t-button.t-button--size-s {
+    height: 44rpx;
+    line-height: 44rpx;
+    border-radius: 26rpx;
+    font-size: 24rpx;
+    width: 128rpx;
+}
+
+.page-module-integralCenter-obtain-btn .t-button {
+    background: #FF7637;
+    border: 1px solid #FF7637;
+    color: #ffffff;
+}
+
+.page-module-integralCenter-obtain-btn.is-done .t-button {
+    background-color: #CCCCCC;
+    border: 1px solid #CCCCCC;
+}
+
+.page-module-integralCenter-exchange.hide .page-module-integralCenter-exchange-cell-content {
+    height: 150rpx;
+    overflow: hidden;
+}
+
+.page-module-integralCenter-exchange.show .page-module-integralCenter-exchange-cell-content {
+    height: auto;
+    overflow: visible;
+}
+
+
+.page-module-integralCenter-dotask.hide .page-module-integralCenter-dotask-cell-content {
+    height: 208rpx;
+    overflow: hidden;
+}
+
+.page-module-integralCenter-dotask.show .page-module-integralCenter-dotask-cell-content {
+    height: auto;
+    overflow: visible;
+}
+
+.page-module-integralCenter-exchange-text {
+    font-size: 24rpx;
+    line-height: 28rpx;
+    text-align: right;
+    color: #FF7637;
+    padding-right: 12rpx;
+}
+
+.page-module-integralCenter-exchange-image {
+    width: 80rpx;
+}
+
+
+.page-module-integralCenter-exchange-btn .t-button {
+    background-color: #EF4028;
+    border: 1px solid #EF4028;
+    color: #ffffff;
+}
+
+
+.page-module-integralCenter-exchange-remain-num {
+    line-height: 36rpx;
+    font-size: 20rpx;
+    color: #E10000;
+}
+
+
+.page-module-integralCenter-rule {
+    position: absolute;
+    top: 56rpx;
+    right: 0;
+    z-index: 3;
+    width: 164rpx;
+    padding: 12rpx 0;
+    background-color: #fff;
+    box-sizing: border-box;
+    border-radius: 14px 0px 0px 14px;
+    font-size: 0;
+}
+
+.page-module-integralCenter-rule__icon {
+    width: 24rpx;
+    height: 24rpx;
+    display: inline-block;
+    vertical-align: middle;
+    background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/integral-rule-icon.svg);
+    margin-left: 24rpx;
+}
+
+.page-module-integralCenter-rule__text {
+    font-size: 24rpx;
+    line-height: 28rpx;
+    color: var(--integralCenter-detail-text--);
+    margin-left: 8rpx;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.page-module-integralCenter-dotask .page-module-integralCenter-cell .t-cell {
+    background-color: #fbe0e0;
+    border-radius: 12rpx;
+    padding: 24rpx 20rpx;
+}
+
+.page-module-integralCenter-dotask .page-module-integralCenter-cell:not(:last-child) .t-cell {
+    margin-bottom: 20rpx;
+}
+
+.page-module-integralCenter-dotask .page-module-integralCenter-cell .t-cell__left {
+    margin-right: 0;
+}
+
+
+.page-module-integralCenter-dotask .t-cell__description {
+    text-align: left;
+
+}
+
+.page-module-integralCenter-dotask .t-cell__description-text {
+    width: 344rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.page-module-integralCenter-dotask-item {
+
+    margin-bottom: 32rpx;
+}
+
+.page-module-integralCenter-card-box-title {
+    text-align: center;
+    font-size: 28rpx;
+    line-height: 36rpx;
+    color: #999;
+    margin-bottom: 20rpx;
+}
+
+.page-module-integralCenter-dotask-increase {
+    font-size: 24rpx;
+    color: #E34D59;
+    margin-top: 8rpx;
+    margin-right: 8rpx;
+    min-width: 100rpx;
+}
+
+.page-module-integralCenter-dotask-increase__plus {
+    display: inline-block;
+    vertical-align: 2rpx;
+}
+
+.page-module-integralCenter-card-toggle {
+    text-align: center;
+    font-size: 28rpx;
+    color: #888;
+    margin-top: 6rpx;
+}
+
+/* */
+.page-module-integralCenter-card-toggle .icon-arrow {
+    width: 40rpx;
+    height: 40rpx;
+    display: inline-block;
+    vertical-align: -8rpx;
+    background-image: url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/scene-module/integral-center/miniprogram/images/arrow.svg ');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.page-module-integralCenter-card-toggle .icon-arrow.down {
+    vertical-align: -6rpx;
+    transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+}

@@ -1,0 +1,41 @@
+/* scene-module/page_module_integral_center/components/_base/dialog/index.wxss */
+.page-module-integralCenter-dialog {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: none;
+  padding: 0 40rpx;
+}
+
+.page-module-integralCenter-dialog.show {
+  display: inline-block;
+}
+
+.page-module-integralCenter-dialog-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-module-integralCenter-dialog__img {
+  width: 100%;
+  height: 920rpx;
+  display: inline-block;
+}
+
+.page-module-integralCenter-dialog__close {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 40rpx;
+  right: 40rpx;
+  background-image: url(https://imgcache.qq.com/open_proj/proj_qcloud_v2/scene-module/integral-center/miniprogram/images/close-24.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}

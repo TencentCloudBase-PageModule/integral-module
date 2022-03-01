@@ -1,0 +1,18 @@
+{
+  "component": true,
+  "usingComponents": {
+    "integralDetalis":"../integralDetalis/index",
+    "integralExchange": "../integralExchange/index",
+    "Card": "../_base/card/index",
+    "Detail": "../_base/detail/index",
+    "signIn-halfSreenDialog": "../_base/halfScreenDialog/index",
+    "Dialog": "../_base/dialog/index",
+    "t-button": "../../miniprogram_npm/tdesign-miniprogram/button/button",
+    "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell",
+    "t-cell-group": "../../miniprogram_npm/tdesign-miniprogram/cell-group/cell-group",
+    "t-toast": "../../miniprogram_npm/tdesign-miniprogram/toast/toast"
+  },
+  "navigationBarBackgroundColor": "#F24C00",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "积分中心"
+}

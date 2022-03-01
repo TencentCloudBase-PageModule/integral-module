@@ -1,0 +1,37 @@
+.integralCenter-exchange-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #f6f6f6;
+}
+
+.integralCenter-exchange-scroll {
+  flex: 1;
+  height: 1px;
+}
+
+.integralCenter-exchange-page .integralCenter-exchange-num {
+  color: #e54545;
+}
+
+.integralCenter-exchange-page .integralCenter-exchange-page-title__main {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.integralCenter-exchange-page .integralCenter-exchange-page-title__desc {
+  font-size: 24rpx;
+  color: #e54545;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8rpx;
+}
+
+.integralCenter-exchange-page .integralCenter-none-more {
+  width: 100%;
+  text-align: center;
+  line-height: 40rpx;
+  font-size: 28rpx;
+  color: #888;
+  padding: 20rpx 0;
+}

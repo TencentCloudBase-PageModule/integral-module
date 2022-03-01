@@ -1,0 +1,11 @@
+<!--scene-module/page_module_sign_up/components/__base/card/index.wxml-->
+<view class="page-module-integralCenter-card {{extClass}}">
+  <view class="page-module-integralCenter-card-title" wx:if="{{!!title}}">
+    {{title}}
+  </view>
+  <!-- <slot></slot> -->
+  <view class="page-module-integralCenter-card-body">
+    <slot></slot>
+  </view>
+
+</view>

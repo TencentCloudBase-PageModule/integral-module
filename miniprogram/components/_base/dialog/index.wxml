@@ -1,0 +1,7 @@
+<!--scene-module/page_module_integral_center/components/_base/dialog/index.wxml-->
+<view class="page-module-integralCenter-dialog {{show?'show':''}}" bind:tap="handleCloseDialog">
+  <view class="page-module-integralCenter-dialog__close"></view>
+  <view class="page-module-integralCenter-dialog-inner">
+    <image class="page-module-integralCenter-dialog__img" src="{{imgUrl}}" />
+  </view>
+</view>

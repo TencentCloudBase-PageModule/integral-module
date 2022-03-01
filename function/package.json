@@ -1,0 +1,17 @@
+{
+  "name": "custom-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "wx-server-sdk": "^2.5.3",
+    "joi": "*",
+    "lodash": "*",
+    "@cloudbase/page-module": "^1.7.1"
+  }
+}

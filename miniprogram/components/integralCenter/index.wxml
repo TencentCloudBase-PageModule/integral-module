@@ -1,0 +1,58 @@
+<!-- 签到模块 start -->
+<view class="page-module-integralCenter-wrap  ">
+  <view class="page-module-integralCenter-rule" bindtap="handleClickRule">
+    <view class="page-module-integralCenter-rule__icon"></view>
+    <text class="page-module-integralCenter-rule__text">积分规则</text>
+  </view>
+  <Detail integralNum="{{integralNum}}" integralTimeLimit="{{integralTimeLimit}}" tabsData="{{tabsData}}" />
+  <view wx:if="{{signUpModel}}" class="page-module-integralCenter-signup">
+    <view style="height: 360rpx; background:#fff;">
+      <slot></slot>
+    </view>
+  </view>
+  <Card title="积分兑好礼" extClass="page-module-integralCenter-exchange page-module-integralCenter-card-box {{exchangeCardAllContent?'show':'hide'}}">
+    <view class="page-module-integralCenter-exchange-cell-content">
+      <t-cell class="page-module-integralCenter-cell page-module-integralCenter-cell-bg" title="{{items.title}}" description="{{items.desc}}" align="top" wx:for="{{exchangeList}}" wx:key="key" wx:for-item="items">
+        <view slot="left-icon" class="page-module-integralCenter-exchange-image">
+          <image src="{{items.icon}}" class="title-image-large" />
+          <view wx:if="{{items.totalRemaining<=10}}" class="page-module-integralCenter-exchange-remain-num">剩余{{items.totalRemaining }}份</view>
+        </view>
+        <view slot="right-icon">
+          <view class="page-module-integralCenter-exchange-text">{{items.faceValue}}积分</view>
+          <t-button class="page-module-integralCenter-exchange-btn" wx:if="{{integralNum < items.faceValue &&  items.totalRemaining > 0}}" bindtap="notPoints" size="small">积分不足</t-button>
+          <t-button wx:else="{{integralNum >= items.faceValue}}" bindtap="doExchangeprize" data-exchange="{{items}}" class="page-module-integralCenter-exchange-btn" size="small">{{items.status === 0 && items.totalRemaining > 0 ?'立即兑换':items.status === 1 ?'已兑换':'已被兑完'}}</t-button>
+        </view>
+      </t-cell>
+    </view>
+    <view class="page-module-integralCenter-card-toggle" bind:tap="handleexchangeToggleShow">{{exchangeCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{exchangeCardAllContent? 'down':''}}"></span> </view>
+  </Card>
+  <Card title="做任务 赚积分" extClass="page-module-integralCenter-dotask page-module-integralCenter-card-box {{dotaskCardAllContent?'show':'hide'}}">
+    <view class="page-module-integralCenter-dotask-cell-content">
+      <view class="page-module-integralCenter-dotask-item" wx:for="{{doTask}}" wx:key="key" wx:for-item="items">
+        <view class="page-module-integralCenter-card-box-title" wx:if="{{items.item.length > 0}}">{{items.title}}</view>
+        <t-cell class="page-module-integralCenter-cell" title="{{ele.title}}" description="{{ele.taskModel === 'progress'?'已完成'+ele.completeNum + '/' +ele.total :ele.desc}}" wx:for="{{items.item}}" wx:key="key" wx:for-item="ele">
+          <view slot="note" class="page-module-integralCenter-dotask-increase">
+            <text class="page-module-integralCenter-dotask-increase__plus">+</text>{{ele.faceValue}}积分
+          </view>
+          <t-button wx:if="{{ele.status === 1}}" slot="right-icon" theme="danger" size="small" bindtap="handleExchangeTask" data-taskid="{{ele.taskId}}">
+            领取
+          </t-button>
+          <t-button wx:elif="{{ele.status === 2}}" slot="right-icon" theme="danger" variant="plain" size="small" bindtap="handleExchangeCustom" data-task="{{ele}}">
+            {{ele.taskInfo.btnTitle}}
+          </t-button>
+          <t-button wx:else="{{ele.status === 3}}" slot="right-icon" theme="danger" variant="plain" size="small" data-taskId="{{ele.taskId}}">已完成</t-button>
+        </t-cell>
+      </view>
+    </view>
+    <view class="page-module-integralCenter-card-toggle" bind:tap="handleDotaskToggleShow">{{dotaskCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{dotaskCardAllContent? 'down':''}}"></span></view>
+
+
+  </Card>
+
+  <signIn-halfSreenDialog halfShow="{{halfDialog}}" bind:handleCloseHalfScreen="doCloseHalfDialog">
+    <rich-text nodes="{{prizeRule}}"></rich-text>
+  </signIn-halfSreenDialog>
+
+  <Dialog show="{{dialogShow}}" bind:closeDialog="doCloseDialog" imgUrl="{{dialogUrl}}"></Dialog>
+  <t-toast id="t-toast" />
+</view>
