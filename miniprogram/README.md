@@ -36,11 +36,11 @@
 
 ## 上手介绍
 
-1. 【必选】在积分中心组件中配置积分、兑换明细[跳转的页面链接](./components/integralCenter#2跳转链接)
+1. 【必选】在积分中心组件中配置积分、兑换明细[跳转的页面链接](./components/integralCenter#2-跳转链接)
 2. 【可选】与签到打卡联动
 [积分中心内嵌签到打卡](./components/integralCenter#3积分中心内嵌签到模块)
 3. 【必选】管理端添加任务与礼品
-4. 【必选】[业务系统联动打通](https://github.com/TencentCloudBase-PageModule/integral-center/tree/master/docs/api.md)
+4. 【必选】[业务系统联动打通](https://github.com/TencentCloudBase-PageModule/integral-center/tree/master/docs/diy.md)
    1. 任务完成需要由业务侧进行标记，例如，用户关注了公众号，则按照如下代码进行调用标识任务完成。
    2. 【可选】业务侧可以开发一些新模块，需要加减积分的
    3. 当前依赖业务侧主动调用任务刷新接口才会对任务进行刷新，请定时调用该函数。
