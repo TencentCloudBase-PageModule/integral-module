@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "integralDetails":"../../components/integralDetails/index"
+  }
+}

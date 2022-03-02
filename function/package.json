@@ -12,6 +12,6 @@
     "wx-server-sdk": "^2.5.3",
     "joi": "*",
     "lodash": "*",
-    "@cloudbase/page-module": "^1.7.1"
+    "@cloudbase/page-module": "^1.8.0"
   }
 }

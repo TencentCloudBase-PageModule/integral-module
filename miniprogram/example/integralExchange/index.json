@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "integralExchange":"../../components/integralExchange/index"
+  }
+}
