@@ -42,6 +42,9 @@
 3. 【必选】管理端添加任务与礼品
 4. 【必选】[业务系统联动打通](https://github.com/TencentCloudBase-PageModule/integral-center/tree/master/docs/diy.md)
    1. 任务完成需要由业务侧进行标记，例如，用户关注了公众号，则按照如下代码进行调用标识任务完成。
-   2. 【可选】业务侧可以开发一些新模块，需要加减积分的
+   2. 配置自定义接口 [积分中心-发放礼品send_prize接口] 到云函数，自行发奖
    3. 当前依赖业务侧主动调用任务刷新接口才会对任务进行刷新，请定时调用该函数。
-   4. 配置自定义接口 [积分中心-发放礼品send_prize接口] 到云函数，自行发奖
+   4. 【可选】业务侧可以开发一些新模块，需要加减积分的
+   5. 【可选】自定义任务需要业务自行捕获[事件](https://github.com/TencentCloudBase-PageModule/integral-center/tree/master/miniprogram/components/integralCenter#%E4%BA%8B%E4%BB%B6%E5%B1%9E%E6%80%A7)，并执行自定义动作 
+
+## 组件介绍
