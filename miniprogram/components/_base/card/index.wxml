@@ -3,7 +3,6 @@
   <view class="page-module-integralCenter-card-title" wx:if="{{!!title}}">
     {{title}}
   </view>
-  <!-- <slot></slot> -->
   <view class="page-module-integralCenter-card-body">
     <slot></slot>
   </view>

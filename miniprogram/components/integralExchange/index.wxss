@@ -11,7 +11,7 @@
 }
 
 .integralCenter-exchange-page .integralCenter-exchange-num {
-  color: #e54545;
+  color: #0abf5b
 }
 
 .integralCenter-exchange-page .integralCenter-exchange-page-title__main {
@@ -21,7 +21,7 @@
 
 .integralCenter-exchange-page .integralCenter-exchange-page-title__desc {
   font-size: 24rpx;
-  color: #e54545;
+  color: #0abf5b;
   display: inline-block;
   vertical-align: middle;
   margin-left: 8rpx;

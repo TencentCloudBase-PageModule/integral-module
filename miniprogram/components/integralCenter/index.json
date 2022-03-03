@@ -1,8 +1,6 @@
 {
   "component": true,
   "usingComponents": {
-    "integralDetalis":"../integralDetalis/index",
-    "integralExchange": "../integralExchange/index",
     "Card": "../_base/card/index",
     "Detail": "../_base/detail/index",
     "signIn-halfSreenDialog": "../_base/halfScreenDialog/index",

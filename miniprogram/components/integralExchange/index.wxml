@@ -3,7 +3,6 @@
     <t-cell description="{{items.created_At}}" wx:for="{{exchangeData}}" wx:key="key" wx:for-item="items">
       <view slot="title" class="integralCenter-exchange-page-title">
         <text class="integralCenter-exchange-page-title__main">{{items.desc}}</text>
-        <!-- <text class="integralCenter-exchange-page-title__desc">查看</text> -->
       </view>
       <view slot="right-icon" class="integralCenter-exchange-num">{{"-"+items.faceValue}}</view>
     </t-cell>

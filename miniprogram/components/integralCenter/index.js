@@ -23,6 +23,23 @@ Component({
       type: Boolean,
       value: false
     },
+    tabsConfig: {
+      type: Array,
+      value: [{ type: 'exchange', jumpUrl: '' }, { type: 'integralDetail', jumpUrl: '' }]
+    },
+    TaskEmptyTitle: {
+      type: String,
+      value: '任务已全部完成，暂无新任务'
+    },
+    PrizeEmptyTitle: {
+      type: String,
+      value: '暂无可兑换礼品'
+    },
+    showNum: {
+      type: Number,
+      value: 4
+    }
+
   },
   data: {
     addressInfo: {},
@@ -32,12 +49,12 @@ Component({
     tabsData: [{
       tabsIcon: 'https://imgcache.qq.com/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/integral-exchange.svg',
       tabsTitle: '兑换记录',
-      tabsJumpUrl: '../../components/integralExchange/index'
+      tabsJumpUrl: ''
     },
     {
       tabsIcon: 'https://imgcache.qq.com/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/integral-exchange.svg',
       tabsTitle: '积分明细',
-      tabsJumpUrl: '../../components/integralDetalis/index'
+      tabsJumpUrl: ''
     }
     ],
     signUpModel: false, //签到模块
@@ -316,7 +333,25 @@ Component({
   },
   lifetimes: {
     async attached() {
-
+      let tabsConfig = [{
+        tabsIcon: 'https://imgcache.qq.com/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/integral-exchange.svg',
+        tabsTitle: '兑换记录',
+        tabsJumpUrl: ''
+      },
+      {
+        tabsIcon: 'https://imgcache.qq.com/open_proj/proj_qcloud_v2/tc-portal/widget/miniprogram/images/integral-exchange.svg',
+        tabsTitle: '积分明细',
+        tabsJumpUrl: ''
+      }
+      ];
+      for (const key of this.properties.tabsConfig) {
+        if (key.type === 'integralDetail') {
+          tabsConfig[1].tabsJumpUrl = key.jumpUrl;
+        }
+        if (key.type === 'exchange') {
+          tabsConfig[0].tabsJumpUrl = key.jumpUrl;
+        }
+      }
       const pointResult = await requestApi('getUserPoints')
       const ruleResult = await requestApi('getRule')
       const taskResult = await requestApi('getTaskList')
@@ -324,10 +359,10 @@ Component({
       this.setData({
         integralNum: pointResult.result.points,
         integralTimeLimit: pointResult.result.expiredPointsInfo ? `${pointResult.result.expiredPointsInfo.faceValue || 0}积分将于${pointResult.result.expiredPointsInfo.expiredTime}过期` : '积分获取后12个自然月到期，记得及时使用~',
-        prizeRule: ruleResult.result,
-        doTask: taskResult.result,
-        exchangeList: exchangeResult.result,
-        signUpModel: this.properties.isSignModule,
+        prizeRule: ruleResult.result || '',
+        doTask: taskResult.result || [],
+        exchangeList: exchangeResult.result || [],
+        tabsData: tabsConfig,
       })
     },
     detached() {

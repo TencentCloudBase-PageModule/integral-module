@@ -9,7 +9,7 @@
   <view class="page-module-integralCenter-detail-tabs">
     <view class="page-module-integralCenter-detail-tabs-item" wx:for="{{tabsData}}" wx:key="key" wx:for-item="items">
       <image class="page-module-integralCenter-tabs-icon" src="{{items.tabsIcon}}" />
-      <navigator class="page-module-integralCenter-detail-tabs-item__title" url="{{items.tabsJumpUrl}}" hover-class="navigator-hover">{{items.tabsTitle}}</navigator>
+      <view class="page-module-integralCenter-detail-tabs-item__title" data-url="{{items.tabsJumpUrl}}" bindtap="dettailNavigateTo">{{items.tabsTitle}}</view>
     </view>
   </view>
 </view>

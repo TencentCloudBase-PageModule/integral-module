@@ -1,5 +1,8 @@
 {
   "usingComponents": {
     "t-cell": "../../miniprogram_npm/tdesign-miniprogram/cell/cell"
-  }
+  },
+  "navigationBarBackgroundColor": "#F24C00",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "积分明细"
 }
