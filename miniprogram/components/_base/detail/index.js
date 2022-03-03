@@ -19,9 +19,6 @@ Component({
       type: Array,
       value: []
     },
-
-
-
   },
 
   /**
@@ -35,6 +32,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    dettailNavigateTo(e) {
+      console.log(e.currentTarget.dataset)
+      wx.navigateTo({
+        url: e.currentTarget.dataset.url,
+      })
+    }
   }
 })

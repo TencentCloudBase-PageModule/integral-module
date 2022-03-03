@@ -5,13 +5,14 @@
     <text class="page-module-integralCenter-rule__text">积分规则</text>
   </view>
   <Detail integralNum="{{integralNum}}" integralTimeLimit="{{integralTimeLimit}}" tabsData="{{tabsData}}" />
-  <view wx:if="{{signUpModel}}" class="page-module-integralCenter-signup">
-    <view style="height: 360rpx; background:#fff;">
+  <view slot="sign" wx:if="{{isSignModule}}" class="page-module-integralCenter-signup">
+    <view class="page-module-integralCenter-signup-box" style="height: 360rpx; background:#fff;">
       <slot></slot>
     </view>
   </view>
-  <Card title="积分兑好礼" extClass="page-module-integralCenter-exchange page-module-integralCenter-card-box {{exchangeCardAllContent?'show':'hide'}}">
-    <view class="page-module-integralCenter-exchange-cell-content">
+  <Card title="积分兑好礼" extClass="page-module-integralCenter-exchange page-module-integralCenter-card-box">
+    <view class="page-module-integralCenter-exchange-cell-content" style="height: {{exchangeCardAllContent?'auto':(exchangeList.length < showNum ? exchangeList.length === 0 ? 1 : exchangeList.length : showNum ) * 160 +'rpx'}};overflow: {{exchangeCardAllContent?'visible':'hidden'}};">
+      <view wx:if="{{!(exchangeList.length > 0)}}" class="page-module-integralCenter-empty">{{PrizeEmptyTitle}}</view>
       <t-cell class="page-module-integralCenter-cell page-module-integralCenter-cell-bg" title="{{items.title}}" description="{{items.desc}}" align="top" wx:for="{{exchangeList}}" wx:key="key" wx:for-item="items">
         <view slot="left-icon" class="page-module-integralCenter-exchange-image">
           <image src="{{items.icon}}" class="title-image-large" />
@@ -24,13 +25,14 @@
         </view>
       </t-cell>
     </view>
-    <view class="page-module-integralCenter-card-toggle" bind:tap="handleexchangeToggleShow">{{exchangeCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{exchangeCardAllContent? 'down':''}}"></span> </view>
+    <view wx:if="{{exchangeList.length > showNum}}" class="page-module-integralCenter-card-toggle" bind:tap="handleexchangeToggleShow">{{exchangeCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{exchangeCardAllContent? 'down':''}}"></span> </view>
   </Card>
-  <Card title="做任务 赚积分" extClass="page-module-integralCenter-dotask page-module-integralCenter-card-box {{dotaskCardAllContent?'show':'hide'}}">
-    <view class="page-module-integralCenter-dotask-cell-content">
+  <Card title="做任务 赚积分" extClass="page-module-integralCenter-dotask page-module-integralCenter-card-box">
+    <view class="page-module-integralCenter-dotask-cell-content" style="height: {{dotaskCardAllContent?'auto':(doTask.length < showNum ? doTask.length === 0  ? 1 : doTask.length : showNum ) * 205+'rpx'}};overflow: {{dotaskCardAllContent?'visible':'hidden'}};">
+      <view wx:if="{{!(doTask.length > 0)}}" class="page-module-integralCenter-empty">{{TaskEmptyTitle}}</view>
       <view class="page-module-integralCenter-dotask-item" wx:for="{{doTask}}" wx:key="key" wx:for-item="items">
         <view class="page-module-integralCenter-card-box-title" wx:if="{{items.item.length > 0}}">{{items.title}}</view>
-        <t-cell class="page-module-integralCenter-cell" title="{{ele.title}}" description="{{ele.taskModel === 'progress'?'已完成'+ele.completeNum + '/' +ele.total :ele.desc}}" wx:for="{{items.item}}" wx:key="key" wx:for-item="ele">
+        <t-cell slot="cell" class="page-module-integralCenter-cell" title="{{ele.title}}" description="{{ele.taskModel === 'progress'?'已完成'+ele.completeNum + '/' +ele.total :ele.desc}}" wx:for="{{items.item}}" wx:key="key" wx:for-item="ele">
           <view slot="note" class="page-module-integralCenter-dotask-increase">
             <text class="page-module-integralCenter-dotask-increase__plus">+</text>{{ele.faceValue}}积分
           </view>
@@ -44,7 +46,7 @@
         </t-cell>
       </view>
     </view>
-    <view class="page-module-integralCenter-card-toggle" bind:tap="handleDotaskToggleShow">{{dotaskCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{dotaskCardAllContent? 'down':''}}"></span></view>
+    <view wx:if="{{doTask.length > showNum}}" class="page-module-integralCenter-card-toggle" bind:tap="handleDotaskToggleShow">{{dotaskCardAllContent?'收起':'展开全部'}} <span class="icon-arrow {{dotaskCardAllContent? 'down':''}}"></span></view>
 
 
   </Card>

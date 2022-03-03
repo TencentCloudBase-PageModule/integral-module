@@ -1,10 +1,8 @@
 <view class="integralCenter-detalis-page">
   <scroll-view class="integralCenter-detalis-scroll" scroll-y="true" bindscrolltolower="scrolltolower">
     <t-cell title="{{items.desc}}" description="{{items.created_At}}" wx:for="{{detalisData}}" wx:key="key" wx:for-item="items">
-      <view slot="right-icon" class="integralCenter-detalis-page__statistics {{items.faceValue > 0?'is-add':''}}">
+      <view slot="right-icon" class="integralCenter-detalis-page__statistics {{items.changeStatus === 1?'':'is-add'}}">
         <view class="integralCenter-detalis-page__num">
-          <!-- <text wx:if="{{items.add}}" class="num-item">+</text>
-          <text wx:else class="num-item">-</text> -->
           {{items.changeStatus === 1?items.faceValue: "-"+items.faceValue}}
         </view>
         <view class="integralCenter-detalis-page__remain">剩余积分 {{items.userRemainingPoints}}</view>

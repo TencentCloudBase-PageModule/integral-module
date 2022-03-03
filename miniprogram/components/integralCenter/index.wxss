@@ -13,6 +13,11 @@
     background: #f6f6f6;
 }
 
+.page-module-integralCenter-empty {
+    text-align: center;
+    margin-top: 36rpx;
+    color: #999;
+}
 
 .page-module-integralCenter-signup {
     position: relative;
@@ -26,7 +31,11 @@
     left: var(--integralCenter-margin-space-burden--);
     right: var(--integralCenter-margin-space-burden--);
     background-color: var(--integralCenter-detail-bg--);
-    z-index: -1;
+    z-index: 0;
+}
+
+.page-module-integralCenter-signup-box {
+    position: relative;
 }
 
 .page-module-integralCenter-cell-bg .t-cell {
@@ -82,27 +91,6 @@
 .page-module-integralCenter-obtain-btn.is-done .t-button {
     background-color: #CCCCCC;
     border: 1px solid #CCCCCC;
-}
-
-.page-module-integralCenter-exchange.hide .page-module-integralCenter-exchange-cell-content {
-    height: 150rpx;
-    overflow: hidden;
-}
-
-.page-module-integralCenter-exchange.show .page-module-integralCenter-exchange-cell-content {
-    height: auto;
-    overflow: visible;
-}
-
-
-.page-module-integralCenter-dotask.hide .page-module-integralCenter-dotask-cell-content {
-    height: 208rpx;
-    overflow: hidden;
-}
-
-.page-module-integralCenter-dotask.show .page-module-integralCenter-dotask-cell-content {
-    height: auto;
-    overflow: visible;
 }
 
 .page-module-integralCenter-exchange-text {

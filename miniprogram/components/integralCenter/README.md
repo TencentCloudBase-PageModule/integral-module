@@ -5,7 +5,8 @@
 | --------- | ----------------------------------- | ----------------------------------------------------------- | --------- |
 | isSignModule | true\|false |是否开启签到模块 | false |
 | tabsConfig | [{type:'exchange',jumpUrl:''},{type:'integralDetail',jumpUrl:''}] |积分明细与兑换好礼跳转路径配置 | "" |
-| emptyTitle | {type:'task',title:'任务已全部完成，暂无新任务'},{type:'exchange',title:'暂无可兑换礼品'} |无任务无奖励时提示文案 | {type:'task',title:'任务已全部完成，暂无新任务'},{type:'exchange',title:'暂无可兑换礼品'} |
+| TaskEmptyTitle | { type: 'task', title: '任务已全部完成，暂无新任务' } |无任务时提示文案 | { type: 'task', title: '任务已全部完成，暂无新任务' } |
+| PrizeEmptyTitle | { type: 'prize', title: '暂无可兑换礼品' } |无奖励时提示文案 | { type: 'prize', title: '暂无可兑换礼品' } |
 | showNum | 4 |任务和奖励默认展示数量 | 4 |
 
 
@@ -14,6 +15,18 @@
 ### 1.积分中心使用
 ```html
 <IntegralCenter></IntegralCenter>
+
+// 使用事件属性示例
+<IntegralCenter 
+  isSignModule="{{true}}" 
+  showNum="{{2}}" 
+  tabsConfig="{{[
+  {type:'integralDetail',jumpUrl:'/scene-module/page_module_integral-center/example/integralDetails/index'},
+  {type:'exchange',jumpUrl:'/scene-module/page_module_integral-center/example/integralExchange/index'}]}}"
+  TaskEmptyTitle="无任务"
+  PrizeEmptyTitle="无奖品"
+  >
+</IntegralCenter>
 ```
 
 ### 2.积分中心内嵌签到模块
@@ -56,6 +69,6 @@
 
 1.需要在详情中本地设置开启将JS编译成ES5。
 2.需要在app.json导入积分明细与兑换记录路径。
-
+3.未配置积分明细与兑换记录跳转路径时不可用。
 
 ## FAQ
