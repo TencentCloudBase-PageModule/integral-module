@@ -5,7 +5,9 @@
 ![](https://qcloudimg.tencent-cloud.cn/raw/099b6ac1c8e5b2109cf925cdfa6d657f.png)
 
 ![](https://scene-module-9gee6idgabd997ca-1306328562.tcloudbaseapp.com/integral/console/guide/step1/config.png)
+
 ![](https://scene-module-9gee6idgabd997ca-1306328562.tcloudbaseapp.com/integral/console/guide/step1/rule.png)
+
 ![](https://scene-module-9gee6idgabd997ca-1306328562.tcloudbaseapp.com/integral/console/guide/step1/prize.png)
 
 ## 资源
