@@ -15,7 +15,7 @@ module.exports = async function demo(params, context) {
         taskId, // 任务标识
         openId, // 被操作用户小程序openId
         completeNum, // 进度型任务填写实际进度数量，标准任务固定为1
-        status, // 设置当前任务状态(1)待领取(2)已完成(3)未完成    
+        status, // 设置当前任务状态(1)待领取(2)未完成(3)已完成   
         })
 }
 ```
