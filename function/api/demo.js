@@ -10,7 +10,7 @@
  */
 
 const  { PageModule,cloudbase } = require('@cloudbase/page-module');
-const pageModule = new PageModule('integral-center');
+const pageModule = new PageModule('integral-module');
 module.exports = async function doSomething(params, context) {
    console.log(params, context, 'doSomething')
 

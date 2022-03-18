@@ -217,7 +217,7 @@
     height: 40rpx;
     display: inline-block;
     vertical-align: -8rpx;
-    background-image: url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/scene-module/integral-center/miniprogram/images/arrow.svg ');
+    background-image: url('https://imgcache.qq.com/open_proj/proj_qcloud_v2/scene-module/integral-module/miniprogram/images/arrow.svg ');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 

@@ -21,8 +21,8 @@
   isSignModule="{{true}}" 
   showNum="{{2}}" 
   tabsConfig="{{[
-  {type:'integralDetail',jumpUrl:'/scene-module/page_module_integral-center/example/integralDetails/index'},
-  {type:'exchange',jumpUrl:'/scene-module/page_module_integral-center/example/integralExchange/index'}]}}"
+  {type:'integralDetail',jumpUrl:'/scene-module/page_module_integral-module/example/integralDetails/index'},
+  {type:'exchange',jumpUrl:'/scene-module/page_module_integral-module/example/integralExchange/index'}]}}"
   TaskEmptyTitle="无任务"
   PrizeEmptyTitle="无奖品"
   >
