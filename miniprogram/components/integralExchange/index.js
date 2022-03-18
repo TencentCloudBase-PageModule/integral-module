@@ -1,5 +1,5 @@
 const { PageModule } = require('@cloudbase/page-module');
-const pageModule = new PageModule('integral-center');
+const pageModule = new PageModule('integral-module');
 const requestApi = async (methodName, params = {}) => {
   const objInfo = await pageModule.callMethod(methodName, params);
   const { result: { code, data } } = objInfo;
