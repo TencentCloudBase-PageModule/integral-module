@@ -9,7 +9,7 @@
 ```js
     // 在自身业务代码中引入pageModuleSDK方法
 const  { PageModule } = require('@cloudbase/page-module');
-const pageModule = new PageModule('integral-center');
+const pageModule = new PageModule('integral-module');
 module.exports = async function demo(params, context) {
     await  pageModule.callMethod('setTaskStatus',{
         taskId, // 任务标识
@@ -28,7 +28,7 @@ module.exports = async function demo(params, context) {
 ```js
 // 在自身业务代码中引入pageModuleSDK方法
 const  { PageModule } = require('@cloudbase/page-module');
-const pageModule = new PageModule('integral-center');
+const pageModule = new PageModule('integral-module');
 module.exports = async function demo(params, context) {
     await  pageModule.callMethod('changePoints',{
         openId,  // 被操作用户小程序openId
@@ -50,7 +50,7 @@ module.exports = async function demo(params, context) {
 ```js
 // 在自身业务代码中引入pageModuleSDK方法 设置每晚定时触发
 const  { PageModule } = require('@cloudbase/page-module');
-const pageModule = new PageModule('integral-center');
+const pageModule = new PageModule('integral-module');
 module.exports = async function demo(params, context) {
     await  pageModule.callMethod('timedTask')
 }

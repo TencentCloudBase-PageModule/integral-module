@@ -16,7 +16,7 @@
 ```
 
 ## api 自定义接口列表
-1. [`send_prize`发奖接口](https://github.com/TencentCloudBase-PageModule/integral-center/tree/master/docs/api.md#发送虚拟奖品(send_prize))
+1. [`send_prize`发奖接口](https://github.com/TencentCloudBase-PageModule/integral-module/tree/master/docs/api.md#发送虚拟奖品(send_prize))
 ## example 示例实现
 
 1. 发奖 [`send_prize`](./example/send_prize.js) 
